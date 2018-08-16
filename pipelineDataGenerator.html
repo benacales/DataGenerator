@@ -1,0 +1,29 @@
+<html>
+<body>
+    <pre id = "thing">
+
+    </pre>
+</body>
+<script>
+
+    var array = []
+    for (var i = 0 ; i < 2000 ; i++) {
+        var num = Math.floor(Math.random() * 2);
+        var nameArray = ["Jim Halpert" , "Dwight Schrute" , "Michael Scott" , "Pam Beesly" , "Toby Flenderson" , "Andy Bernard" , "Kevin Malone" , "Angela Martin" , "Erin Hannon" , "Ryan Howard" , "Kelly Kapoor" , "Meredith Palmer" ]
+        var chosenPerson = "";
+        chosenPerson = nameArray[Math.floor(Math.random() * nameArray.length)];
+
+        array.push({chosenPerson, num: "" + num})
+
+        console.log ("{ 'assignee': '" , chosenPerson , "' , 'Card_Is_Open': '" , num , "'}")
+    }
+
+
+    console.log(array)
+
+    document.getElementById('thing').innerHTML = JSON.stringify(array, null, 4);
+
+
+</script>
+
+</html>
